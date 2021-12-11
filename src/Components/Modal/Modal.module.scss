@@ -1,0 +1,324 @@
+.modal {
+  width: 99%;
+  height: 100vh;
+  position: absolute;
+  overflow: auto;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  background: rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 3rem;
+
+  .modalContainer {
+    background: var(--secondary-theme-6);
+    border: 10px solid var(--primary-theme-3);
+    border-radius: 10px;
+    height: auto;
+
+    .close {
+      border: 1px solid var(--secondary-theme-3);
+      border-radius: 4px;
+      outline: none;
+      width: 32px;
+      height: 32px;
+      right: calc(-100% + 50px);
+      top: 16px;
+      display: flex;
+      justify-content: center;
+      position: relative;
+      align-items: center;
+      background: var(--secondary-theme-3);
+
+      &::before,
+      &::after {
+        content: "";
+        position: absolute;
+        width: 2.5px;
+        height: 24px;
+        background: var(--blue);
+      }
+      &::before {
+        transform: rotate(45deg);
+      }
+      &::after {
+        transform: rotate(-45deg);
+      }
+    }
+
+    h1 {
+      text-align: center;
+      color: var(--secondary-theme-3);
+      font-size: 2.5rem;
+    }
+
+    .modalWrapper {
+      display: grid;
+      grid-template-columns: 550px 1fr;
+      padding: 2rem 2rem 3rem 2rem;
+      gap: 2rem;
+      align-items: center;
+
+      .modalDescription {
+        border: 2px solid var(--bg-header);
+        box-shadow: 0 2px 3px 0 rgb(0 0 0 / 50%);
+        background: var(--primary-theme-7);
+        padding: 1rem 2rem;
+        border-radius: 10px;
+        height: fit-content;
+
+        h2 {
+          font-size: 1.5rem;
+          color: var(--secondary-theme-3);
+          margin: 0.8rem 0;
+        }
+
+        p {
+          font-size: 1rem;
+          color: var(--primary-theme-5);
+          margin: 0.8rem 0 1rem 0;
+        }
+
+        .modalIcon {
+          display: flex;
+          align-items: center;
+          gap: 0.4rem;
+          margin: 0.8rem 0;
+
+          svg {
+            color: var(--primary-theme-6);
+            margin-bottom: 9px;
+          }
+
+          span {
+            font-size: 1.2rem;
+            color: var(--primary-theme-6);
+            margin-bottom: 0.6rem;
+            display: inline-block;
+            font-weight: bold;
+          }
+        }
+
+        ul {
+          position: relative;
+          margin-bottom: 1rem;
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+          gap: 0.8rem;
+
+          li {
+            position: relative;
+            overflow: hidden;
+            background: var(--secondary-theme-5);
+            box-shadow: 0 2px 3px 0 rgb(0 0 0 / 50%);
+            border-radius: 4px;
+            margin-bottom: 0.8rem;
+            color: var(--secondary-theme-3);
+            font-family: var(--type-third);
+            padding: 1rem 1rem 1rem 1.5rem;
+            font-weight: 600;
+
+            &:hover::before {
+              will-change: transform;
+              animation: animateHover 0.5s forwards;
+            }
+
+            &::before {
+              content: "";
+              display: block;
+              position: absolute;
+              background: var(--primary-theme-5);
+              width: 3px;
+              height: 40px;
+              top: 5px;
+              left: 10px;
+              border-radius: 20px;
+              z-index: 100;
+            }
+          }
+        }
+
+        a {
+          color: var(--secondary-theme-3);
+          display: flex;
+          align-items: center;
+          gap: 0.5rem;
+          transition: 0.3s;
+
+          &:hover {
+            color: var(--pink);
+          }
+        }
+
+        .modalLinks {
+          background: var(--secondary-theme-5);
+          padding: 1rem;
+          border-radius: 6px;
+          box-shadow: 0 2px 3px 0 rgb(0 0 0 / 50%);
+          width: fit-content;
+        }
+      }
+    }
+  }
+}
+
+@keyframes animateHover {
+  0%,
+  100% {
+    transform: translate3d(0, 0, 0);
+  }
+  50% {
+    transform: translate3d(0, -100%, 0);
+  }
+  51% {
+    transform: translate3d(0, 100%, 0);
+  }
+}
+
+@media (max-width: 71.125rem) {
+  .modal {
+    padding: 3rem;
+    width: 100%;
+    height: auto;
+
+    .modalContainer {
+      .modalWrapper {
+        grid-template-columns: minmax(200px, 610px);
+
+        .modalDescription {
+          padding: 1rem;
+          margin-top: 1rem;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 48rem) {
+  .modal {
+    padding: 3rem 2rem;
+
+    .modalContainer {
+      .modalWrapper {
+        padding: 2rem 1rem 3rem 1rem;
+      }
+    }
+  }
+}
+
+@media (max-width: 26.5625rem) {
+  .modal {
+    padding: 2rem 1.375rem;
+    .modalContainer {
+      border: 6px solid var(--primary-theme-3);
+      .close {
+        right: calc(-100% + 30px);
+        top: 6px;
+        width: 25px;
+        height: 25px;
+      }
+
+      h1 {
+        font-size: 1.5rem;
+      }
+      .modalWrapper {
+        padding: 2rem 1rem 3rem 1rem;
+
+        .modalDescription {
+          .modalIcon {
+            span {
+              font-size: 1rem;
+            }
+          }
+
+          div {
+            ul {
+              li {
+                font-size: 0.875rem;
+                padding: 10px 7px;
+
+                &::before {
+                  height: 28px;
+                  top: 5px;
+                  left: 3px;
+                }
+              }
+            }
+          }
+
+          .modalLinks {
+            a {
+              font-size: 13px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 23.4375rem) {
+  .modal {
+    height: auto;
+    padding: 1rem 1rem;
+    .modalContainer {
+      border: 6px solid var(--primary-theme-3);
+      .close {
+        right: calc(-100% + 30px);
+        top: 6px;
+        width: 25px;
+        height: 25px;
+      }
+
+      h1 {
+        font-size: 1.5rem;
+      }
+      .modalWrapper {
+        padding: 1rem 1rem 3rem 1rem;
+
+        .modalDescription {
+          h2 {
+            font-size: 1.25rem;
+          }
+
+          p {
+            font-size: 0.875rem;
+          }
+          .modalIcon {
+            span {
+              font-size: 1rem;
+            }
+          }
+
+          div {
+            ul {
+              li {
+                font-size: 0.875rem;
+                padding: 10px 11px;
+
+                &:last-child {
+                  font-size: 11px;
+                  letter-spacing: -1px;
+                }
+
+                &::before {
+                  height: 28px;
+                  top: 5px;
+                  left: 3px;
+                }
+              }
+            }
+          }
+
+          .modalLinks {
+            a {
+              font-size: 12px;
+            }
+          }
+        }
+      }
+    }
+  }
+}

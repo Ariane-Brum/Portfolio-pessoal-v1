@@ -1,0 +1,88 @@
+.aboutExp {
+  height: fit-content;
+  background: var(--primary-theme-1);
+  padding: 1.875rem;
+  border-radius: 10px;
+  box-shadow: 0 2px 3px 0 rgb(0 0 0 / 50%);
+
+  h2,
+  h3 {
+    font-family: var(--type-second);
+    line-height: 1.875rem;
+    font-size: 1.5625rem;
+    margin: 1rem 0 1rem 0;
+    color: var(--secondary-theme-3);
+    font-weight: 400;
+  }
+
+  p {
+    font-size: 1.125rem;
+    color: var(--secondary-theme-1);
+    line-height: 150%;
+    max-width: 56.25rem;
+  }
+
+  .aboutIcons {
+    display: flex;
+    align-items: center;
+    gap: 0.625rem;
+
+    svg {
+      color: var(--secondary-theme-3);
+    }
+
+    h3 {
+      color: var(--secondary-theme-3);
+    }
+  }
+
+  a {
+    color: var(--secondary-theme-3);
+  }
+
+  p {
+    color: var(--primary-theme-6);
+  }
+}
+
+@media (max-width: 58.875rem) {
+  // 942
+
+  .aboutExp {
+    grid-column: 2;
+    grid-row: 1;
+    align-self: end;
+    padding: 1rem;
+  }
+}
+
+@media (max-width: 52.625rem) {
+  // 842
+
+  .aboutExp {
+    grid-column: none;
+    grid-row: none;
+    align-self: end;
+    padding: 1rem;
+  }
+}
+
+@media (max-width: 26.5625rem) {
+  // 425
+
+  .aboutExp {
+    padding: 0.875rem 1rem 2rem 1rem;
+    .aboutIcons {
+      gap: 6px;
+
+      h3 {
+        font-size: 1.3125rem;
+        margin: 0.875rem 0;
+      }
+    }
+
+    p {
+      font-size: 1rem;
+    }
+  }
+}
