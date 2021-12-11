@@ -35,6 +35,17 @@ export default function Home() {
 
         <meta itemProp="image" content="/ogimage.png" />
         <meta property="og:image:secure_url" content="/ogimage.png" />
+
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Home | Meu Portfólio" />
+        <meta
+          name="twitter:description"
+          content="Olá me chamo Ariane Brum, sou uma desenvolvedora Front-end em busca de uma oportunidade. Portfólio feito para apresentar algumas informações e projetos feitos por mim!"
+        />
+        <meta
+          name="twitter:image"
+          content="https://portfolio-pessoal-ariane-brum.vercel.app//ogimage.png"
+        />
       </Head>
 
       <main className={`${styles.home} containerPages`}>
