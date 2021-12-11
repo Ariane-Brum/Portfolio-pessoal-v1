@@ -54,7 +54,6 @@ export default function Sobre() {
               <h3>Dados de Contato</h3>
 
               <ul>
-                <li className={`animate`}>Rua Clemente Pereira, 475</li>
                 <li className={`animate`}>Porto Alegre / RS</li>
                 <li className={`animate`}>Bairro Partenon</li>
                 <li className={`animate`}>
