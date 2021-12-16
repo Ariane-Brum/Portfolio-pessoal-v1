@@ -57,9 +57,8 @@ export default function Home() {
             <h1 className="typeAnimationTitle">
               Ariane <em>Brum</em>
             </h1>
-            <h2 className="typeAnimationSubtitle">
-              Estudante de Análise e desenvolvimento de sistemas.
-            </h2>
+
+            <h2 className="typeAnimationSubtitle">Estudante de ADS.</h2>
           </div>
           <div className={styles.homeSocial}>
             <ul>
