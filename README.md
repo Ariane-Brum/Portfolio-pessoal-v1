@@ -68,7 +68,7 @@ O site é composto por 3 seções diferentes:
 - React-slick <br>
 - Nextjs-progressbar<br>
 - React Hooks <br>
-- Context API <br><br>
+
 <hr />
 
 Desenvolvido com :hearts: por Ariane Brum.
