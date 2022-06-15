@@ -30,8 +30,7 @@
    <h4 >:sun_with_face:Tema Light</h4>
   <img src="./src/screens/mobile-light.gif"  />
   <br><br>
-<a href="https://portfolio-pessoal-ariane-brum.vercel.app/" target="_blank" > Clique para visitar o projeto
-</a>
+
   </div>
 
 <hr />
